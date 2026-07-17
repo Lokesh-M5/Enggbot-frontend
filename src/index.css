@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Alfa+Slab+One&family=Instrument+Sans:wght@400;500;600;700&family=Lexend+Deca:wght@300;400;500;700&family=Poppins:wght@400;500;600&family=Righteous&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --primary:#8b5cf6;
+  --secondary:#0f172a;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Instrument Sans', sans-serif;
+  background:#020617;
+  color:white;
+  overflow-x:hidden;
+}
+
+.gradient-bg{
+  background:
+  radial-gradient(circle at top left, rgba(139,92,246,0.35), transparent 30%),
+  radial-gradient(circle at bottom right, rgba(59,130,246,0.25), transparent 35%),
+  linear-gradient(to bottom right, #020617, #0f172a, #111827);
+}
+
+.glass{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:50px;
+
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.logo-font{
+  font-family:'Righteous', cursive;
+}
+
+.hero-title{
+  font-family:'Lexend Deca', sans-serif;
+}
+
+.slab{
+  font-family:'Alfa Slab One', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.nav-font{
+  font-family:'Poppins', sans-serif;
+  font-size:0.95rem;
+  font-weight:500;
+  letter-spacing:0.2px;
+}
+
+.animate-fade{
+  animation:fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+input[type="file"]::file-selector-button{
+  background:#ffffff;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-right:12px;
+}
+
+input[type="file"]::file-selector-button:hover{
+  opacity:0.9;
+}
+
+.score-glow{
+  text-shadow:
+  0 0 20px rgba(59,130,246,.6);
+}
